@@ -1,0 +1,41 @@
+(a) How many commits exist in the repository history after completing step 8 (Including commits made
+	by the original author)?
+	
+	A total of 7 commits were made across all authors.
+
+(b) When was the file .gitignore added?
+
+	Tue Jan 24 22:28:11 2017 -0600
+	
+(c) What is the difference between git log and git status?
+
+	git log, according to its manual page:
+	Shows the commit logs.
+		The command takes options applicable to the git rev-list command to control what is shown
+		and how, and options applicable to the git diff-* commands to control how the changes each
+		commit introduces are shown.
+
+	git status, according to its manual page:
+	Displays paths that have differences between the index file and the current HEAD commit, paths
+	that have differences between the working tree and the index file, and paths in the working tree
+	that are not tracked by Git (and are not ignored by gitignore(5)). The first are what you would
+	commit by running git commit; the second and third are what you could commit by running git add
+	before running git commit.
+
+(d) What is the difference between unstaged and untracked files?
+
+	An unstaged file will not be included in a commit, but the file has been indexed by git and is
+	therefore being tracked (i.e. being watched for changes). An untracked file has not been indexed
+	by git, and therefore its changes will not be tracked.
+
+(e) What is the difference between git checkout and git reset?
+
+	git checkout will move HEAD to a different branch and update the working directory to match the
+	called branch. git reset will move the tip of a branch to a different commit, leaving any
+	commits after the called branch dangling. Dangling commits are subject to garbage collection.
+	
+(f) What happens if you try to pull remote changes when there are uncommitted changes in your
+	working directory?
+
+	Git will not allow you to pull remote changes when there are uncommitted changes in your working
+	directory. The changes must be committed or stashed before the pull will execute.
