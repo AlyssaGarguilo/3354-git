@@ -1,6 +1,6 @@
+# CS 3354.502 Homework 1
+
+This assignment demonstrated basic competency with git for a course at the University of Texas at Dallas.
+
 Name: Alyssa Garguilo
 NetID: ang150030
-
-# Assignment 1 Example repository
-
-In this assignment you will perform a series of basic Git actions to get you familiarized with the basics.
