@@ -6,9 +6,15 @@ public class Main {
         try {
             int result = addArguments(args);
             System.out.println(result);
-        } catch (Exception e) {
-            System.err.println("Please provide at least two integers to add");
         }
+		catch (NumberFormatException e) {
+			// Argument syntax is given in Extended Backus-Naur Form, as per Unix standards
+			System.err.println("Please use the supported syntax:\n\t
+				[-] integer integer {integer}");
+        }
+		catch (IllegalArgumentException e) {
+			System.err.println("Please provide at least two integer arguments.");
+		}
     }
 
     private static int addArguments(String[] args) {
